@@ -16,3 +16,6 @@ dependencies:
 
 dev_dependencies:
   lints: ^1.0.0
+
+executables:
+  dart-pubspec-licenses-lite: main
