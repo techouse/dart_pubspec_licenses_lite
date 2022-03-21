@@ -8,7 +8,7 @@ It generates a TEXT file with all the combined licenses.
 ## Installing
 
 ```bash
-dart pub global activate -sgit https://github.com/techouse/flutter_oss_licenses
+dart pub global activate -sgit https://github.com/techouse/dart_pubspec_licenses_lite
 ```
 
 ## Usage
