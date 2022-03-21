@@ -1,5 +1,3 @@
-library dart_oss_licenses;
-
 import 'dart:io' show File, Platform;
 
 import 'package:path/path.dart' as path;
