@@ -49,7 +49,7 @@ void main(List<String> arguments) async {
       onDone: () => sink.close(),
     );
 
-    stdout.writeln('Done!');
+    if (verbose) stdout.writeln('Wrote: ${licensesFile.path}');
   } on FormatException catch (err) {
     exitCode = 2;
     stderr.writeln(err.toString());
