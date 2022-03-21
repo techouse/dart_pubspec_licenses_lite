@@ -7,14 +7,30 @@ import 'package:path/path.dart' as path;
 
 bool verbose = false;
 
+final ArgParser parser = ArgParser()
+  ..addOption(
+    'pubspec-lock',
+    abbr: 'i',
+    help: 'Input pubscpec.lock file',
+    mandatory: true,
+  )
+  ..addOption(
+    'output',
+    abbr: 'o',
+    help: 'Output combined_licenses.txt',
+    mandatory: true,
+  )
+  ..addFlag(
+    'verbose',
+    abbr: 'v',
+    help: 'Show additional diagnostic info',
+    defaultsTo: false,
+  );
+
 void main(List<String> arguments) async {
   try {
     exitCode = 0;
 
-    final ArgParser parser = ArgParser()
-      ..addOption('pubspec-lock', abbr: 'i', mandatory: true)
-      ..addOption('output', abbr: 'o', mandatory: true)
-      ..addFlag('verbose', abbr: 'v', defaultsTo: false);
     final ArgResults args = parser.parse(arguments);
 
     verbose = args['verbose'];
@@ -53,7 +69,8 @@ void main(List<String> arguments) async {
   } on FormatException catch (err) {
     exitCode = 2;
     stderr.writeln(err.toString());
-    if (verbose) rethrow;
+    stdout.writeln('');
+    stdout.writeln(parser.usage);
   } catch (err) {
     exitCode = 1;
     stderr.writeln(err.toString());
