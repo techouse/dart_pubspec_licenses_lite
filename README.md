@@ -8,7 +8,7 @@ It generates a TEXT file with all the combined licenses.
 ## Usage
 
 ```bash
-dart run bin/generate.dart --pubspec-lock path/to/pubspec.lock --output path/to/combined_licenses.txt
+dart run bin/main.dart --pubspec-lock path/to/pubspec.lock --output path/to/combined_licenses.txt
 ```
 
 ## Output example
