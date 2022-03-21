@@ -5,10 +5,16 @@ Flutter dependency. This is a package that helps gather and assemble OSS license
 
 It generates a TEXT file with all the combined licenses.
 
+## Installing
+
+```bash
+dart pub global activate -sgit https://github.com/techouse/flutter_oss_licenses
+```
+
 ## Usage
 
 ```bash
-dart run bin/main.dart --pubspec-lock path/to/pubspec.lock --output path/to/combined_licenses.txt
+dart-pubspec-licenses-lite --pubspec-lock path/to/pubspec.lock --output path/to/combined_licenses.txt
 ```
 
 ## Output example
