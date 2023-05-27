@@ -8,12 +8,8 @@ import 'package:path/path.dart' as path;
 bool verbose = false;
 
 final ArgParser parser = ArgParser()
-  ..addOption(
-    'pubspec-lock',
-    abbr: 'i',
-    help: 'Input pubscpec.lock file',
-    mandatory: true
-  )
+  ..addOption('pubspec-lock',
+      abbr: 'i', help: 'Input pubscpec.lock file', mandatory: true)
   ..addOption(
     'output',
     abbr: 'o',
