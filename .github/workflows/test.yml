@@ -44,8 +44,6 @@ jobs:
       - id: install
         name: Install dependencies
         run: make install
-      - name: Run the build system for Dart code generation and modular compilation
-        run: make code_gen
       - name: Check the formatting of one or more Dart files
         run: make check_format
         if: always() && steps.install.outcome == 'success'
@@ -82,8 +80,6 @@ jobs:
       - id: install
         name: Install dependencies
         run: make install
-      - name: Run the build system for Dart code generation and modular compilation
-        run: make code_gen
       - name: Run VM tests
         run: make tests
         if: always() && steps.install.outcome == 'success'
@@ -119,8 +115,6 @@ jobs:
         run: |
           make install
           dart pub global activate coverage
-      - name: Run the build system for Dart code generation and modular compilation
-        run: make code_gen
       - name: Collect and report coverage
         run: |
           dart pub global run coverage:test_with_coverage
