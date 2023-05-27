@@ -64,8 +64,8 @@ class Package {
     try {
       license = await File(licensePath).readAsString();
     } catch (e) {
-      if (await File(licensePath + '.md').exists()) {
-        license = await File(licensePath + '.md').readAsString();
+      if (await File('$licensePath.md').exists()) {
+        license = await File('$licensePath.md').readAsString();
         isMarkdown = true;
       }
     }
