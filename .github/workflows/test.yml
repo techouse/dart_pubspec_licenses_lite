@@ -40,7 +40,7 @@ jobs:
           sdk: ${{ matrix.sdk }}
       - id: checkout
         name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - id: install
         name: Install dependencies
         run: make install
@@ -76,7 +76,7 @@ jobs:
           sdk: ${{ matrix.sdk }}
       - id: checkout
         name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - id: install
         name: Install dependencies
         run: make install
@@ -109,7 +109,7 @@ jobs:
           sdk: ${{ matrix.sdk }}
       - id: checkout
         name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - id: install
         name: Install dependencies
         run: |
