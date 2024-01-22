@@ -25,7 +25,7 @@ jobs:
         sdk: [ stable ]
     steps:
       - name: Cache Pub hosted dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: "~/.pub-cache/hosted"
           key: "os:${{ matrix.os }};pub-cache-hosted;sdk:${{ matrix.sdk }};packages:dart-pubspec-licenses-lite;commands:codegen-format-analyze"
@@ -61,7 +61,7 @@ jobs:
         sdk: [ stable ]
     steps:
       - name: Cache Pub hosted dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: "~/.pub-cache/hosted"
           key: "os:${{ matrix.os }};pub-cache-hosted;sdk:${{ matrix.sdk }};packages:dart-pubspec-licenses-lite;commands:codegen-test"
@@ -94,7 +94,7 @@ jobs:
         sdk: [ stable ]
     steps:
       - name: Cache Pub hosted dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: "~/.pub-cache/hosted"
           key: "os:${{ runner.os }};pub-cache-hosted;sdk:${{ matrix.sdk }};packages:dart-pubspec-licenses-lite;commands:codegen-coverage"
