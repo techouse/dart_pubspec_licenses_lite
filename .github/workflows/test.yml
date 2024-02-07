@@ -43,6 +43,8 @@ jobs:
         run: dart format lib test --output=none --set-exit-if-changed .
       - name: Analyze the project's Dart code
         run: dart analyze lib test --fatal-infos
+      - name: Test
+        run: dart test
       - name: Install coverage dependencies
         run: |
           set -e
