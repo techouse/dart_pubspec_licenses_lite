@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cache Pub hosted dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: "~/.pub-cache/hosted"
           key: "os:ubunut-latest;pub-cache-hosted;sdk:stable;packages:dart-pubspec-licenses-lite;commands:codegen-test"
